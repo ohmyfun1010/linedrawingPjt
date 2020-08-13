@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="board">	
+	
+	<insert id="addNoticeContentInfo" parameterType="kr.co.beans.NoticeContentBean">
+		
+		<selectKey keyProperty="content_idx" order="BEFORE" resultType="java.lang.Integer">
+			select IFNULL(max(content_idx),0)+1 from noticecontent_table
+		</selectKey>
+			insert into noticecontent_table(content_idx, content_subject, content_text,content_date) values (#{content_idx}, #{content_subject}, #{content_text}, DEFAULT)
+	</insert>
+	
+	<select id= "getNoticeContentList" resultType="kr.co.beans.NoticeContentBean"  parameterType="kr.co.beans.PageBean">
+		select content_idx,content_subject,content_text,DATE_FORMAT(content_date, '%Y-%m-%d') AS content_date from noticecontent_table where content_idx BETWEEN #{start} AND #{end} order by content_idx DESC
+	</select>
+	
+	<select id="date" resultType="kr.co.beans.NoticeContentBean" parameterType="java.lang.Integer">
+		select DATE_FORMAT(content_date, '%Y-%m-%d') AS content_date from noticecontent_table where content_idx=#{content_idx}
+	</select>
+	
+	<select id="noticeDataCount" resultType="java.lang.Integer">
+		select count(*) from noticecontent_table
+	</select>
+	
+	<select id='getNoticeContentInfo' resultType="kr.co.beans.NoticeContentBean" parameterType="java.lang.Integer">
+		select content_idx,content_subject,content_text,DATE_FORMAT(content_date, '%Y-%m-%d') AS content_date from noticecontent_table where content_idx = #{content_idx}
+	</select>
+	
+	<delete id = 'deleteNoticeContent' parameterType="java.lang.Integer">
+		delete from noticecontent_table where content_idx = #{content_idx}
+	</delete>
+	
+	<update id = 'modifyNoticeContent' parameterType="kr.co.beans.NoticeContentBean" >
+		update noticecontent_table set content_subject=#{content_subject},content_text=#{content_text} where content_idx=#{content_idx}
+	</update>
+	
+	<!-- review board -->
+	
+	<insert id="addReviewContentInfo" parameterType="kr.co.beans.ReviewContentBean">
+		
+		<selectKey keyProperty="content_idx" order="BEFORE" resultType="java.lang.Integer">
+			select IFNULL(max(content_idx),0)+1 from reviewcontent_table
+		</selectKey>
+			insert into reviewcontent_table(content_idx, content_subject, content_text,content_file,content_writer_idx,content_writer_name,content_date) values (#{content_idx}, #{content_subject}, #{content_text},#{content_file},#{content_writer_idx},#{content_writer_name}, DEFAULT)
+	</insert>
+	
+	<select id= "getReviewContentList" resultType="kr.co.beans.ReviewContentBean">
+		select content_idx,content_subject,content_text,DATE_FORMAT(content_date, '%Y-%m-%d') AS content_date,content_writer_name from reviewcontent_table where content_idx BETWEEN #{start} AND #{end} order by content_idx DESC
+	</select>
+	
+	<select id='getReviewContentInfo' resultType="kr.co.beans.ReviewContentBean" parameterType="java.lang.Integer">
+		select content_idx,content_subject,content_text,DATE_FORMAT(content_date, '%Y-%m-%d') AS content_date,content_file,content_writer_name,content_writer_idx from reviewcontent_table where content_idx = #{content_idx}
+	</select>
+	
+	<update id = 'modifyReviewContent' parameterType="kr.co.beans.ReviewContentBean" >
+		update reviewcontent_table set content_subject=#{content_subject},content_text=#{content_text},content_file=#{content_file} where content_idx=#{content_idx}
+	</update>
+	
+	<delete id = 'deleteReviewContent' parameterType="java.lang.Integer">
+		delete from reviewcontent_table where content_idx = #{content_idx}
+	</delete>
+	
+	<select id="reviewDataCount" resultType="java.lang.Integer">
+		select count(*) from reviewcontent_table
+	</select>
+	<!-- 검색기능 -->
+	<select id="searchReviweContent" parameterType="kr.co.beans.SearchBean" resultType="kr.co.beans.ReviewContentBean">
+		select content_idx,content_subject,content_text,DATE_FORMAT(content_date, '%Y-%m-%d') AS content_date,content_writer_name from reviewcontent_table where content_writer_name = #{content_writer_name} and content_idx BETWEEN #{start} AND #{end} order by content_idx DESC
+	</select>
+	
+	<select id="searchreviewDataCount" resultType="java.lang.Integer" parameterType="java.lang.String">
+		select count(*) from reviewcontent_table where content_writer_name = #{content_writer_name} 
+	</select>
+</mapper>
+

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="user">
+	<select id="checkUserIdExist" parameterType="java.lang.String" resultType="java.lang.String">
+		select user_name from user_table where user_id = #{user_id}
+	</select>	
+	
+	<insert id="addUserInfo" parameterType="kr.co.beans.UserBean">
+		<selectKey keyProperty="user_idx" order="BEFORE" resultType="java.lang.Integer">
+			select IFNULL(max(user_idx),0)+1 from user_table
+		</selectKey>
+		insert into user_table(user_idx,user_id,user_name,user_pw) values (#{user_idx}, #{user_id}, #{user_name}, #{user_pw}) 
+	</insert>
+	
+	<select id="getLoginUserInfo" parameterType="kr.co.beans.UserBean" resultType="kr.co.beans.UserBean">
+			select user_idx, user_name from user_table where user_id=#{user_id} and user_pw=#{user_pw}
+	</select>
+	
+	<select id="userinfo" parameterType="java.lang.Integer" resultType="kr.co.beans.UserBean">
+			select user_name,user_id,user_pw from user_table where user_idx = #{user_idx} 
+	</select>
+	
+	<delete id="userinfodelete" parameterType="java.lang.Integer">
+			delete from user_table where user_idx =#{user_idx}
+	</delete>
+	
+	<update id="userinfomodify" parameterType="kr.co.beans.UserBean">
+			update user_table set user_pw = #{user_pw} where user_idx = #{user_idx}
+	</update>
+</mapper>
+
