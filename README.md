@@ -83,28 +83,28 @@
 <br>
 
 
-#### **회원**
+#### **회원가입**
 
 <img src="https://user-images.githubusercontent.com/62956948/90331868-f55fd700-dff2-11ea-9f5c-79bc009c4e48.png" width="1000">
 
 <br>
 
 
-#### **관리자 진료소 수정,삭제**
+#### **공지게시판**
 
-<img src="https://user-images.githubusercontent.com/62956948/90328486-a3f61e80-dfd7-11ea-8592-b0974df271d1.png" width="1300">
-
-<br><br>
-
-#### **지역별 선별진료소 검색 화면**
-
-<img src="https://user-images.githubusercontent.com/62956948/90328533-03542e80-dfd8-11ea-839e-30736c107f1c.png" width="1300">
+<img src="https://user-images.githubusercontent.com/62956948/90331924-643d3000-dff3-11ea-9c2b-7a34eb2970ea.png" width="1000">
 
 <br><br>
 
-#### **검색 결과**
+#### **리뷰게시판**
 
-<img src="https://user-images.githubusercontent.com/62956948/90329182-5f6d8180-dfdd-11ea-945b-c5b7bf16b6e4.jpg" width="1300">
+<img src="https://user-images.githubusercontent.com/62956948/90331951-96e72880-dff3-11ea-81f5-e70112a7390e.png" width="1000">
+
+<br><br>
+
+#### **주문 가격 및 유의 사항**
+
+<img src="https://user-images.githubusercontent.com/62956948/90331959-a9616200-dff3-11ea-8ca1-fbb4f69d02f0.png" width="1300">
 
 <br><br>
 
