@@ -72,19 +72,19 @@
 
 #### **메인 화면**
 
-<img src="https://user-images.githubusercontent.com/62956948/90328356-b9b71400-dfd6-11ea-95b1-53365396c2cb.png" width="1300">
+<img src="https://user-images.githubusercontent.com/62956948/90331825-99954e00-dff2-11ea-9ea0-08170af48e30.png" width="1300">
 
 <br><br>
 
-#### **관리자 로그인 팝업**
+#### **로그인 화면**
 
-<img src="https://user-images.githubusercontent.com/62956948/90328476-9ccf1080-dfd7-11ea-9eb1-4be825164fc9.PNG" width="1300">
+<img src="https://user-images.githubusercontent.com/62956948/90331813-75d20800-dff2-11ea-8897-c451a6b0ae34.jpg" width="1300">
 
 <br><br>
 
-#### **관리자 새 진료소 등록**
+#### **회원가입 **
 
-<img src="https://user-images.githubusercontent.com/62956948/90328483-a0629780-dfd7-11ea-9355-4d1f28da0e1b.PNG" width="1300">
+<img src="https://user-images.githubusercontent.com/62956948/90331810-736fae00-dff2-11ea-8043-c1f1213794a9.jpg" width="1300">
 
 <br><br>
 
