@@ -83,7 +83,8 @@
 <br>
 
 
-#### **회원가입 **
+
+#### **검색 결과**
 
 <img src="https://user-images.githubusercontent.com/62956948/90331868-f55fd700-dff2-11ea-9f5c-79bc009c4e48.png" width="1000">
 
