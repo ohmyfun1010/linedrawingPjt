@@ -104,11 +104,12 @@
 
 #### **주문 가격 및 유의 사항**
 
-<img src="https://user-images.githubusercontent.com/62956948/90331959-a9616200-dff3-11ea-8ca1-fbb4f69d02f0.png" width="1300">
+<img src="https://user-images.githubusercontent.com/62956948/90331959-a9616200-dff3-11ea-8ca1-fbb4f69d02f0.png" width="1000">
 
 <br><br>
 
+#### **회원 정보 관리**
 
-
+<img src="https://user-images.githubusercontent.com/62956948/90331989-f9402900-dff3-11ea-8c13-fc86cff9e261.png" width="1000">
 
 
