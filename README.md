@@ -3,7 +3,7 @@
 
 ## 개요
 
-<img src="https://user-images.githubusercontent.com/62956948/90328332-8bd1cf80-dfd6-11ea-8906-26d8a4a177ca.png" width="400">
+<img src="https://user-images.githubusercontent.com/62956948/90331967-c7c75d80-dff3-11ea-8cc1-5723ba67705a.png" width="400">
 
 본 프로젝트는 현재 취미로 하고있는 라인드로잉 소개 및 리뷰 게시판입니다.<br>
 
