@@ -80,13 +80,15 @@
 
 <img src="https://user-images.githubusercontent.com/62956948/90331865-f3961380-dff2-11ea-8cf3-0165ecb7a2dd.png" width="1000">
 
-<br><br>
+<br>
+
 
 #### **회원가입 **
 
 <img src="https://user-images.githubusercontent.com/62956948/90331868-f55fd700-dff2-11ea-9f5c-79bc009c4e48.png" width="1000">
 
-<br><br>
+<br>
+
 
 #### **관리자 진료소 수정,삭제**
 
